@@ -8,7 +8,7 @@ It's not wise to store the tenants migrations inside your global
 `database/migrations` directory. Laravel by default runs these migrations
 when calling the `php artisan migrate` command. Even though you can suggest
 a connection during that command, it's much cleaner to store these migrations
-inside a separate directory, e.g. `database/tenancy/migrations`. 
+inside a separate directory, e.g. `database/migrations/tenant`. 
 The migrations for the system database can stay in `database/migrations`.
 
 ##### Default migrations for new tenants
@@ -19,7 +19,7 @@ absolute path and all your new tenants will run these migrations per default.
 
 ```php
   // ..
-  "tenant-migrations-path" => database_path('tenancy/migrations'),
+  "tenant-migrations-path" => database_path('migrations/tenant'),
   // ..
 ```
 
